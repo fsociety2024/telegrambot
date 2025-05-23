@@ -1,28 +1,28 @@
 # Telegram Boot Notification Bot
 
-این پروژه یک ربات تلگرام ساده است که هنگام روشن شدن سیستم (مثلاً لپ‌تاپ یا سرور)، یک پیام به تلگرام شما ارسال می‌کند.
+This project is a simple Telegram bot that sends a message to your Telegram chat when your system (e.g., laptop or server) boots up.
 
 ---
 
-## ویژگی‌ها
+## ✨ Features
 
-- 📤 ارسال پیام خودکار هنگام بوت شدن سیستم
-- 💬 قابلیت دریافت و پاسخ به پیام‌های متنی ساده
-- 🐍 نوشته‌شده با Python و کتابخانه محبوب `python-telegram-bot`
-
----
-
-## پیش‌نیازها
-
-- نصب Python نسخه ۳.۷ یا بالاتر
-- داشتن یک ربات تلگرام و دریافت توکن از BotFather
-- دسترسی به اینترنت (در صورت فیلتر بودن Telegram API باید از پراکسی استفاده شود)
+- 📤 Sends a notification when the system starts
+- 💬 Can receive and respond to simple text messages
+- 🐍 Built with Python using the `python-telegram-bot` library
 
 ---
 
-## نصب
+## 🧰 Requirements
 
-1. ابتدا این مخزن را کلون یا دانلود کنید:
+- Python 3.7 or higher
+- A Telegram bot token from [BotFather](https://t.me/BotFather)
+- Internet access (use a proxy if Telegram API is blocked in your country)
+
+---
+
+## ⚙️ Installation
+
+1. Clone this repository:
 
 ```bash
 git clone https://github.com/your-username/your-repo-name.git
