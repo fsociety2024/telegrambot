@@ -2,7 +2,7 @@ import os
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, filters, ContextTypes
 
-# توکن و چت آیدی رو از متغیرهای محیطی (env) می‌گیریم
+# دریافت توکن و شناسه چت از متغیرهای محیطی (.env)
 TOKEN = os.getenv("TOKEN")
 CHAT_ID = int(os.getenv("CHAT_ID"))
 
@@ -27,7 +27,6 @@ if __name__ == '__main__':
 
     print("ربات داره اجرا میشه...")
 
-    # پیام استارتاپ رو وقتی ربات بالا اومد می‌فرستیم
     app.post_init = on_startup
 
     app.run_polling()
