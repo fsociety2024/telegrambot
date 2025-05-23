@@ -1,8 +1,10 @@
+import os
 from telegram import Update
-from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, filters, ContextTypes, CallbackContext
+from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, filters, ContextTypes
 
-TOKEN = "توکن ربات تلگرامی رو اینجا وارد کنید "
-CHAT_ID =  # شناسه چت خودت اینجا بذار
+# توکن و چت آیدی رو از متغیرهای محیطی (env) می‌گیریم
+TOKEN = os.getenv("TOKEN")
+CHAT_ID = int(os.getenv("CHAT_ID"))
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("سلام! ربات فعال است.")
@@ -12,7 +14,7 @@ async def echo(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(f"پیام شما: {text_received}")
 
 async def send_startup_notification(application):
-    await application.bot.send_message(chat_id=CHAT_ID, text="سیستم روشن شد و ربات فعال است.")
+    await application.bot.send_message(chat_id=CHAT_ID, text="✅ سیستم روشن شد و ربات فعال است.")
 
 async def on_startup(application):
     await send_startup_notification(application)
@@ -25,7 +27,7 @@ if __name__ == '__main__':
 
     print("ربات داره اجرا میشه...")
 
-    # پیام استارتاپ رو وقتی که ربات شروع شد میفرستیم
+    # پیام استارتاپ رو وقتی ربات بالا اومد می‌فرستیم
     app.post_init = on_startup
 
     app.run_polling()
