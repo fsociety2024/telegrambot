@@ -25,8 +25,9 @@ This project is a simple Telegram bot that sends a message to your Telegram chat
 1. Clone this repository:
 
 bash
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/fsociety2024/telegrambot.git
+cd telegrambot
+
 
 
 2. Install the required packages:
